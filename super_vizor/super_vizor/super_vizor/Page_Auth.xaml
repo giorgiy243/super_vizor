@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="super_vizor.Page_Auth"
+    Title="Auth_page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome"></Label>
+            <Entry Placeholder="Login"></Entry>
+            <Entry Placeholder="Password"></Entry>
+            <Button Text="Enter" Clicked="buttonEnter_click"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

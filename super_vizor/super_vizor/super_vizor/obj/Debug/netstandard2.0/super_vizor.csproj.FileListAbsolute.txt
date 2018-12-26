@@ -10,3 +10,16 @@ C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor
 C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.dll
 C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.pdb
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\bin\Debug\netstandard2.0\super_vizor.deps.json
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\bin\Debug\netstandard2.0\super_vizor.dll
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\bin\Debug\netstandard2.0\super_vizor.pdb
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.csprojAssemblyReference.cache
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.csproj.CoreCompileInputs.cache
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.AssemblyInfoInputs.cache
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.AssemblyInfo.cs
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.dll
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.pdb
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\Page_Auth.xaml.g.cs

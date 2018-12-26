@@ -719,11 +719,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Apps\\super_vizor\\super_vizor\\super_vizor.iOS\\super_vizor.iOS.csproj",
+      "projectUniqueName": "C:\\Git\\super_vizor\\super_vizor\\super_vizor\\super_vizor.iOS\\super_vizor.iOS.csproj",
       "projectName": "super_vizor.iOS",
-      "projectPath": "C:\\Apps\\super_vizor\\super_vizor\\super_vizor.iOS\\super_vizor.iOS.csproj",
+      "projectPath": "C:\\Git\\super_vizor\\super_vizor\\super_vizor\\super_vizor.iOS\\super_vizor.iOS.csproj",
       "packagesPath": "C:\\Users\\EGOR\\.nuget\\packages\\",
-      "outputPath": "C:\\Apps\\super_vizor\\super_vizor\\super_vizor.iOS\\obj\\",
+      "outputPath": "C:\\Git\\super_vizor\\super_vizor\\super_vizor\\super_vizor.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -740,8 +740,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Apps\\super_vizor\\super_vizor\\super_vizor\\super_vizor.csproj": {
-              "projectPath": "C:\\Apps\\super_vizor\\super_vizor\\super_vizor\\super_vizor.csproj"
+            "C:\\Git\\super_vizor\\super_vizor\\super_vizor\\super_vizor\\super_vizor.csproj": {
+              "projectPath": "C:\\Git\\super_vizor\\super_vizor\\super_vizor\\super_vizor\\super_vizor.csproj"
             }
           }
         }

@@ -11,7 +11,7 @@ namespace super_vizor
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Page_Auth();
         }
 
         protected override void OnStart()
