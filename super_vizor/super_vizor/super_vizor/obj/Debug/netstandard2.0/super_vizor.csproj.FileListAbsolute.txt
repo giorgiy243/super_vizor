@@ -1,0 +1,12 @@
+C:\Apps\super_vizor\super_vizor\super_vizor\bin\Debug\netstandard2.0\super_vizor.deps.json
+C:\Apps\super_vizor\super_vizor\super_vizor\bin\Debug\netstandard2.0\super_vizor.dll
+C:\Apps\super_vizor\super_vizor\super_vizor\bin\Debug\netstandard2.0\super_vizor.pdb
+C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.csprojAssemblyReference.cache
+C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.csproj.CoreCompileInputs.cache
+C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.AssemblyInfoInputs.cache
+C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.AssemblyInfo.cs
+C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.dll
+C:\Apps\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.pdb
