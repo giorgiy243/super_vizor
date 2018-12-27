@@ -207,6 +207,4 @@ C:\Git\super_vizor\super_vizor\super_vizor\super_vizor.Android\obj\Debug\81\andr
 C:\Git\super_vizor\super_vizor\super_vizor\super_vizor.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Git\super_vizor\super_vizor\super_vizor\super_vizor.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.pdb
 C:\Git\super_vizor\super_vizor\super_vizor\super_vizor.Android\obj\Debug\81\res\drawable\cat.jpg
-C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\bin\Debug\netstandard2.0\super_vizor.dll
-C:\Git\super_vizor\super_vizor\super_vizor\super_vizor.Android\bin\Debug\super_vizor.dll.mdb
 C:\Git\super_vizor\super_vizor\super_vizor\super_vizor.Android\obj\Debug\81\linksrc\super_vizor.dll.mdb

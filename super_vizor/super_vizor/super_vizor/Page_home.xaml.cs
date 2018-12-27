@@ -16,7 +16,7 @@ namespace super_vizor
         {
             InitializeComponent();
             ShowFirms();
-            
+            Menu();
 
         }
 
@@ -43,5 +43,35 @@ namespace super_vizor
             }
             this.Content =  mListVirv;
         }
+
+        private void Menu()
+        {
+            /*           TableView TView = new TableView();
+                       TableSection TSection =  new TableSection();
+                       TSection.Title = "Comoanys";
+
+                       List<string> mItem = new List<string>();
+                       ListView mListVirv = new ListView();
+                       mListVirv.ItemsSource = mItem;
+                       Company[] com = new Company[5];
+                       {
+                           com[0] = new Company("Akvelon");
+                           com[1] = new Company("Microsoft");
+                           com[2] = new Company("Google");
+                           com[3] = new Company("Space");
+                           com[4] = new Company("EA");
+                       }
+                       foreach (var item in com)
+                       {
+                           mItem.Add(item.ShowComp());
+                       }
+           
+            //    TSection.Add(mItem);
+            TView.Root.Add(TSection);
+            this.Content = TView;
+         */
+        }
+
     }
+
 }
