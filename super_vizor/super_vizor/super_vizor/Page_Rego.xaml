@@ -13,7 +13,7 @@
                         </TableSection>
                         <TableSection Title="Сontacts">
                             <EntryCell x:Name="PNumber" Label="Phone" Keyboard="Telephone" Placeholder="Phone number" />
-                            <EntryCell x:Name="Email" Label="Email" Keyboard="Email" Placeholder="Введите email" />
+                            <EntryCell x:Name="Email" Label="Email" Keyboard="Email" Placeholder="Enter email" />
                         </TableSection>
                         <TableSection Title="Account">
                             <EntryCell x:Name="LogIn" Label="login" Keyboard="Default" Placeholder="Enter login" />
