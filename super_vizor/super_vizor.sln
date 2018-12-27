@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "super_vizor.Android", "supe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "super_vizor.iOS", "super_vizor\super_vizor.iOS\super_vizor.iOS.csproj", "{6644B9BE-F6C7-41B2-9B55-264951FAC5D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "super_vizor", "super_vizor\super_vizor\super_vizor.csproj", "{3E803AEF-6D68-4B3E-B654-8D134A395B2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "super_vizor", "super_vizor\super_vizor\super_vizor.csproj", "{3E803AEF-6D68-4B3E-B654-8D134A395B2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

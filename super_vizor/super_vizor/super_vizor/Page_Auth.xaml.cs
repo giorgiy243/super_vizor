@@ -19,7 +19,12 @@ namespace super_vizor
 
         private void buttonEnter_click(object sender, EventArgs e)
         {
+            Navigation.PushAsync(new Page_home());
+        }
 
+        private void buttonRegistration_click(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Page_Rego());
         }
 
     }

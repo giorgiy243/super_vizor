@@ -2,6 +2,8 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using System.Collections.Generic;
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace super_vizor
 {
@@ -11,8 +13,9 @@ namespace super_vizor
         {
             InitializeComponent();
 
-            MainPage = new Page_Auth();
+            MainPage = new NavigationPage(new Page_Auth());
         }
+
 
         protected override void OnStart()
         {

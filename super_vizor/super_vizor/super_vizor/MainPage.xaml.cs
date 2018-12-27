@@ -13,5 +13,10 @@ namespace super_vizor
         {
             InitializeComponent();
         }
+
+        private async void Page_Auth(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page_Auth());
+        }
     }
 }

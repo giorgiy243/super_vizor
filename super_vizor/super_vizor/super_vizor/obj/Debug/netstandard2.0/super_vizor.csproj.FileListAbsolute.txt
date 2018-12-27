@@ -23,3 +23,5 @@ C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\
 C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.dll
 C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\super_vizor.pdb
 C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\Page_Auth.xaml.g.cs
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\Page_home.xaml.g.cs
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\Page_Rego.xaml.g.cs

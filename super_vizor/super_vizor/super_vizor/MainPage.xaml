@@ -2,13 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:super_vizor"
-             x:Class="super_vizor.MainPage">
+             x:Class="super_vizor.MainPage"
+             Title="Main Page">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.Content>
+        <StackLayout Padding="10,10,10,10"
+                     VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand">
+            <Button Text="Enter"
+                    VerticalOptions="EndAndExpand"
+                    Clicked="Page_Auth"></Button>
+        </StackLayout>
+    </ContentPage.Content>
 
 </ContentPage>
