@@ -13,7 +13,7 @@ namespace super_vizor
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Page_Auth());
+            MainPage = new NavigationPage(new Page_home());
         }
 
 

@@ -26,7 +26,9 @@ namespace super_vizor
             string login = LogIn.Text;
             string password = Passw.Text;
 
-            Navigation.PushAsync(new Page_home());
+
+            Navigation.PopAsync();
+            Navigation.PopAsync();
         }
 
     }

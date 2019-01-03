@@ -6,16 +6,8 @@ namespace super_vizor
 {
     class Company
     {
+        public string name { get; set;}
 
-        public Company(string name)
-        {
-            Name = name;
-        }
-        private string Name;
-
-        public string ShowComp()
-        {
-            return Name;
-        }
+        public bool IsVisibleDetail { get; set; }
     }
 }
