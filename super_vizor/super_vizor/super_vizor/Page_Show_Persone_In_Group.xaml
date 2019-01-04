@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:super_vizor"
+             x:Class="super_vizor.Page_Show_Persone_In_Group"
+             Title="Group">
+
+    <ContentPage.BindingContext>
+        <local:CompanyViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <ListView ItemsSource="{Binding persones}"
+                ItemTapped="ListView_ItemTapped"
+                HasUnevenRows="True"
+                Margin="10,10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="12,2,12,2">
+                            <FlexLayout Direction="Row">
+                                <Label Text="{Binding FirstName}" FontSize="28"/>
+                                <Label Text="  " FontSize="28"/>
+                                <Label Text="{Binding LastName}" FontSize="28"/>
+                            </FlexLayout>
+                            <FlexLayout Direction="Row"
+                                        IsVisible="{Binding IsVisible}">
+                                <Label Text="Age:" FontSize="24"/>
+                                <Label Text="  " FontSize="24"/>
+                                <Label Text="{Binding Age}" FontSize="24"/>
+                            </FlexLayout>
+                            <FlexLayout Direction="Row"
+                                        IsVisible="{Binding IsVisible}">
+                                <Label Text="Eexperience:" FontSize="24"/>
+                                <Label Text="  " FontSize="24"/>
+                                <Label Text="{Binding Experience}" FontSize="24"/>
+                            </FlexLayout>
+                            <FlexLayout Direction="Row"
+                                        IsVisible="{Binding IsVisible}">
+                                <Label Text="Position:" FontSize="24"/>
+                                <Label Text="  " FontSize="24"/>
+                                <Label Text="{Binding  Position}" FontSize="24"/>
+                            </FlexLayout>
+                            <FlexLayout Direction="Row"
+                                        IsVisible="{Binding IsVisible}">
+                                <Label Text="Salary:" FontSize="24"/>
+                                <Label Text="  " FontSize="24"/>
+                                <Label Text="{Binding Salary}" FontSize="24"/>
+                            </FlexLayout>
+                            <FlexLayout Direction="Row">
+                                <Button Text="Remove"
+                                        Clicked="Button_Remove"
+                                        IsVisible="{Binding IsVisible}"/>
+                                <Button Text="Update"
+                                        Clicked="Button_Update"
+                                        IsVisible="{Binding IsVisible}"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

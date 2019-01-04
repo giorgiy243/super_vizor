@@ -21,14 +21,6 @@ namespace super_vizor
             InitializeComponent();
         }
 
-// ---------------------------------------------------------------------------------------------------------------
-        private void ShowFirms()
-        {
-            var image = new Image { Source = "cat.jpg" };
-            this.Content = image;
-        }
-
-
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var vm = BindingContext as CompanyViewModel;
@@ -42,8 +34,14 @@ namespace super_vizor
 
         private void Button_Remove (object sender, EventArgs e)
         {
-            _vm.RemoveItem(_company);
+            _vm.RemoveCompany(_company);
         }
+
+        private void Button_Details (object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Page_Details());
+        }
+
     }
 
 }

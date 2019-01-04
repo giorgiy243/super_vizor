@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:super_vizor"
+             x:Class="super_vizor.Page_Details"
+             Title="Details">
+
+    <ContentPage.BindingContext>
+        <local:CompanyViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <StackLayout Margin="10,10">
+        <FlexLayout Direction="Row">
+            <Button Text="Groups" HeightRequest="50" Clicked="Button_Groups"/>
+            <Button Text="Azure" HeightRequest="50"/>
+            <Button Text="Apps" HeightRequest="50"/>
+        </FlexLayout>
+
+        <ListView x:Name="lvGroups"
+                ItemsSource="{Binding groups}"
+                ItemTapped="ListView_ItemTapped"
+                IsVisible="False"
+                HasUnevenRows="True"
+                Margin="10,10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="12,2,12,2">
+                            <Label Text="{Binding Name}" FontSize="28"/>
+                            <FlexLayout Direction="Row">
+                                <Button Text="Show"
+                                        Clicked="Button_Show_Group"
+                                        IsVisible="{Binding IsVisible}"/>
+                                <Button Text="Remove"
+                                        Clicked="Button_Remove_Group"
+                                        IsVisible="{Binding IsVisible}"/>
+                            </FlexLayout>   
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+
+
+
+    
+</ContentPage>
