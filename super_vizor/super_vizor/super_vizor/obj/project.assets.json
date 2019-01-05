@@ -349,11 +349,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Apps\\super_vizor\\super_vizor\\super_vizor\\super_vizor.csproj",
+      "projectUniqueName": "C:\\Git\\super_vizor\\super_vizor\\super_vizor\\super_vizor\\super_vizor.csproj",
       "projectName": "super_vizor",
-      "projectPath": "C:\\Apps\\super_vizor\\super_vizor\\super_vizor\\super_vizor.csproj",
+      "projectPath": "C:\\Git\\super_vizor\\super_vizor\\super_vizor\\super_vizor\\super_vizor.csproj",
       "packagesPath": "C:\\Users\\EGOR\\.nuget\\packages\\",
-      "outputPath": "C:\\Apps\\super_vizor\\super_vizor\\super_vizor\\obj\\",
+      "outputPath": "C:\\Git\\super_vizor\\super_vizor\\super_vizor\\super_vizor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
