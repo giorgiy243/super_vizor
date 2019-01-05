@@ -19,11 +19,11 @@
                         <Label Text="{Binding name}" FontSize="28"/>
                         <FlexLayout
                             Direction="Row">
-                            <Button Text="Details"
-                                Clicked="Button_Details"
-                                IsVisible="{Binding IsVisibleDetail}"/>
                             <Button Text="Remove"
                                     Clicked="Button_Remove"
+                                IsVisible="{Binding IsVisibleDetail}"/>
+                            <Button Text="Details"
+                                Clicked="Button_Details"
                                 IsVisible="{Binding IsVisibleDetail}"/>
                         </FlexLayout>
                     </StackLayout>

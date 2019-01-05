@@ -27,3 +27,4 @@ C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\
 C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\Page_Details.xaml.g.cs
 C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\Page_Show_Persone_In_Group.xaml.g.cs
 C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\Page_Update_Persone.xaml.g.cs
+C:\Git\super_vizor\super_vizor\super_vizor\super_vizor\obj\Debug\netstandard2.0\Page_Add_Persone.xaml.g.cs

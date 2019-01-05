@@ -39,7 +39,7 @@ namespace super_vizor
 
         private void Button_Details (object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Page_Details());
+            Navigation.PushAsync(new Page_Details(_vm));
         }
 
     }

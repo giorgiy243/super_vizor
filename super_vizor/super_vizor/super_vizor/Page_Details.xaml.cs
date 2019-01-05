@@ -9,42 +9,66 @@ using Xamarin.Forms.Xaml;
 
 namespace super_vizor
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Page_Details : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Page_Details : ContentPage
+    {
         private CompanyViewModel _vm;
-        private Groups _group;
+        private Groups _goup;
+        private Azure _azure;
 
-        public Page_Details ()
-		{
-			InitializeComponent ();
-		}
-
-        private void Button_Groups (object sender, EventArgs e)
+        internal Page_Details(CompanyViewModel vm)
         {
-            lvGroups.IsVisible = !lvGroups.IsVisible;
+            InitializeComponent();
+            _vm = vm;
         }
 
-        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void ListView_ItemTapped_Groups(object sender, ItemTappedEventArgs e)
         {
             var vm = BindingContext as CompanyViewModel;
             var group = e.Item as Groups;
 
             _vm = vm;
-            _group = group;
+            _goup = group;
 
             vm.HideOrShowGroups(group);
         }
 
-        private void Button_Remove_Group (object sender, EventArgs e)
+        private void ListView_ItemTapped_Azure(object sender, ItemTappedEventArgs e)
         {
-            _vm.RemoveGroup(_group);
+            var vm = BindingContext as CompanyViewModel;
+            var azure = e.Item as Azure;
+
+            _vm = vm;
+            _azure = azure;
+
+            vm.HideOrShowAzure(azure);
         }
 
-        private void Button_Show_Group (object sender, EventArgs e)
+        private void Button_Remove_Group(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Page_Show_Persone_In_Group());
+            _vm.RemoveGroup(_goup);
         }
 
+        private void Button_Remove_Azure(object sender, EventArgs e)
+        {
+            _vm.RemoveAzure(_azure);
+        }
+
+        private void Button_Show(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Page_Show_Persone_In_Group(_vm));
+        }
+
+        private void Button_Groups(object sender, EventArgs e)
+        {
+            Groups.IsVisible = true;
+            Azure.IsVisible = false;
+        }
+
+        private void Button_Azure (object sender, EventArgs s)
+        {
+            Azure.IsVisible = true;
+            Groups.IsVisible = false;
+        }
     }
 }

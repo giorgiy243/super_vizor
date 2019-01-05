@@ -5,17 +5,20 @@ using System.Collections.ObjectModel;
 
 namespace super_vizor
 {
-    class CompanyViewModel
+    internal class CompanyViewModel
     {
         private Company _oldCompany;
         private Groups _oldGroup;
         private Persones _oldPersone;
+        private Azure _oldAzure;
 
         public ObservableCollection<Company> companys { get; set; }
 
         public ObservableCollection<Groups> groups{ get; set; }
 
         public ObservableCollection<Persones> persones { get; set; }
+
+        public ObservableCollection<Azure> azures { get; set; }
 
         public CompanyViewModel()
         {
@@ -157,6 +160,35 @@ namespace super_vizor
                     IsVisible = false,
                 },
             };
+
+            azures = new ObservableCollection<Azure>
+            {
+                new Azure
+                {
+                    ID = "MS-AZR-0063P",
+                    IsVisible = false,
+                },
+                new Azure
+                {
+                    ID = "MC-AZR-3651P",
+                    IsVisible = false,
+                },
+                new Azure
+                {
+                    ID = "DS-AZR-1105P",
+                    IsVisible = false,
+                },
+                new Azure
+                {
+                    ID = "MS-AZR-7851S",
+                    IsVisible = false,
+                },
+                new Azure
+                {
+                    ID = "MS-AZR-0101P",
+                    IsVisible = false,
+                },
+            };
         }
 
 
@@ -202,7 +234,7 @@ namespace super_vizor
             _oldGroup = group;
         }
 
-        public void HideOrShowGPersones(Persones persone)
+        public void HideOrShowPersones(Persones persone)
         {
             if (_oldPersone == persone)
             {
@@ -221,6 +253,27 @@ namespace super_vizor
             }
 
             _oldPersone = persone;
+        }
+
+        public void HideOrShowAzure(Azure azure)
+        {
+            if (_oldAzure == azure)
+            {
+                azure.IsVisible = !azure.IsVisible;
+                UpdateAzure(azure);
+            }
+            else
+            {
+                if (_oldAzure != null)
+                {
+                    _oldAzure.IsVisible = false;
+                    UpdateAzure(_oldAzure);
+                }
+                azure.IsVisible = true;
+                UpdateAzure(azure);
+            }
+
+            _oldAzure = azure;
         }
 
         private void UpdateCompany (Company company)
@@ -247,6 +300,14 @@ namespace super_vizor
             persones.Insert(index, persone);
         }
 
+        private void UpdateAzure(Azure azure)
+        {
+            var index = azures.IndexOf(azure);
+
+            azures.Remove(azure);
+            azures.Insert(index, azure);
+        }
+
         public void RemoveCompany (Company company)
         {
             var index = companys.IndexOf(company);
@@ -268,5 +329,29 @@ namespace super_vizor
             _oldPersone = null;
         }
 
+        public void RemoveAzure (Azure azure)
+        {
+            var index = azures.IndexOf(azure);
+            azures.RemoveAt(index);
+            _oldAzure = null;
+        }
+
+        public void ChangePerson (Persones oldPersone, Persones persone)
+        {
+            var index = persones.IndexOf(oldPersone);
+
+            persones.Remove(oldPersone);
+            persones.Insert(index, persone);
+
+            _oldPersone = null;
+        }
+
+        public void AddPersone(Persones persone)
+        {
+            persones.Add(persone);
+            _oldPersone = persone;
+            HideOrShowPersones(persone);
+
+        }
     }
 }

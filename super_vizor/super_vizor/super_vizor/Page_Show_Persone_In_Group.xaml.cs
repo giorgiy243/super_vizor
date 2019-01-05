@@ -15,9 +15,10 @@ namespace super_vizor
         private CompanyViewModel _vm;
         private Persones _persone;
 
-        public Page_Show_Persone_In_Group ()
+        internal Page_Show_Persone_In_Group (CompanyViewModel vm)
 		{
 			InitializeComponent ();
+            _vm = vm;
 		}
 
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -28,7 +29,7 @@ namespace super_vizor
             _vm = vm;
             _persone = person;
 
-            vm.HideOrShowGPersones(person);
+            vm.HideOrShowPersones(person);
         }
 
         private void Button_Remove(object sender, EventArgs e)
@@ -38,7 +39,12 @@ namespace super_vizor
 
         private void Button_Update(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Page_Update_Persone());
+            Navigation.PushAsync(new Page_Update_Persone(_vm, _persone));
+        }
+
+        private void Button_Add(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Page_Add_Persone(_vm));
         }
     }
 }

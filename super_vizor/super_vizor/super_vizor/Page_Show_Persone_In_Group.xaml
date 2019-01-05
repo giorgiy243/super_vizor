@@ -11,9 +11,9 @@
 
     <StackLayout>
         <ListView ItemsSource="{Binding persones}"
-                ItemTapped="ListView_ItemTapped"
-                HasUnevenRows="True"
-                Margin="10,10">
+                  ItemTapped="ListView_ItemTapped"
+                  HasUnevenRows="True"
+                  Margin="10,10">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -60,5 +60,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+      <Button Text="Add" Clicked="Button_Add"/>
     </StackLayout>
 </ContentPage>

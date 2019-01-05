@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:super_vizor"
+             x:Class="super_vizor.Page_Add_Persone"
+             Title="Add new persone">
+
+    <ContentPage.BindingContext>
+        <local:CompanyViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10,10,10,10">
+        <TableView>
+            <TableView.Root>
+                <TableRoot>
+                    <TableSection Title="Adding">
+                        <EntryCell x:Name="FName" Label="First name" Keyboard="Default" Placeholder="Enter first name"/>
+                        <EntryCell x:Name="LName" Label="Last name" Keyboard="Default" Placeholder="Enter last name"/>
+
+                        <EntryCell x:Name="Age" Label="Age" Keyboard="Telephone" Placeholder="Enter age"/>
+                        <EntryCell x:Name="Experience" Label="Experience" Keyboard="Telephone" Placeholder="Enter experience"/>
+
+                        <EntryCell x:Name="Position" Label="Position" Keyboard="Default" Placeholder="Enter position"/>
+                        <EntryCell x:Name="Salary" Label="Salary" Keyboard="Telephone" Placeholder="Enter salary"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView.Root>
+        </TableView>
+        <Button Text="Save" Clicked="Button_Save"/>
+
+
+    </StackLayout>
+
+</ContentPage>

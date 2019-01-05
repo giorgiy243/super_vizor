@@ -9,33 +9,57 @@
         <local:CompanyViewModel/>
     </ContentPage.BindingContext>
 
-
-    <StackLayout Margin="10,10">
-        <FlexLayout Direction="Row">
+    <StackLayout>
+        <FlexLayout Direction="Row" >
             <Button Text="Groups" HeightRequest="50" Clicked="Button_Groups"/>
-            <Button Text="Azure" HeightRequest="50"/>
+            <Button Text="Azure" HeightRequest="50" Clicked="Button_Azure"/>
             <Button Text="Apps" HeightRequest="50"/>
         </FlexLayout>
 
-        <ListView x:Name="lvGroups"
-                ItemsSource="{Binding groups}"
-                ItemTapped="ListView_ItemTapped"
-                IsVisible="False"
-                HasUnevenRows="True"
-                Margin="10,10">
+
+        <ListView ItemsSource="{Binding groups}"
+                  HasUnevenRows="True"
+                  Margin="10,10"
+                  x:Name="Groups"
+                  ItemTapped="ListView_ItemTapped_Groups"
+                  IsVisible="False">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Padding="12,2,12,2">
                             <Label Text="{Binding Name}" FontSize="28"/>
-                            <FlexLayout Direction="Row">
-                                <Button Text="Show"
-                                        Clicked="Button_Show_Group"
-                                        IsVisible="{Binding IsVisible}"/>
+                            <FlexLayout
+                            Direction="Row">
                                 <Button Text="Remove"
-                                        Clicked="Button_Remove_Group"
-                                        IsVisible="{Binding IsVisible}"/>
-                            </FlexLayout>   
+                                    Clicked="Button_Remove_Group"
+                                IsVisible="{Binding IsVisible}"/>
+                                <Button Text="Show"
+                                Clicked="Button_Show"
+                                IsVisible="{Binding IsVisible}"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ListView ItemsSource="{Binding azures}"
+                  HasUnevenRows="True"
+                  Margin="10,10"
+                  x:Name="Azure"
+                  ItemTapped="ListView_ItemTapped_Azure"
+                  IsVisible="False">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="12,2,12,2">
+                            <Label Text="{Binding ID}" FontSize="28"/>
+                            <FlexLayout
+                            Direction="Row">
+                                <Button Text="Remove"
+                                    Clicked="Button_Remove_Azure"
+                                IsVisible="{Binding IsVisible}"/>
+                            </FlexLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -44,7 +68,4 @@
     </StackLayout>
     
 
-
-
-    
 </ContentPage>
