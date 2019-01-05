@@ -17,14 +17,15 @@
                 <ViewCell>
                     <StackLayout Padding="12,2,12,2">
                         <Label Text="{Binding name}" FontSize="28"/>
-                        <FlexLayout
-                            Direction="Row">
+                        <FlexLayout Direction="Row">
                             <Button Text="Remove"
+                                    WidthRequest="200"
                                     Clicked="Button_Remove"
-                                IsVisible="{Binding IsVisibleDetail}"/>
+                                    IsVisible="{Binding IsVisibleDetail}"/>
                             <Button Text="Details"
-                                Clicked="Button_Details"
-                                IsVisible="{Binding IsVisibleDetail}"/>
+                                    Clicked="Button_Details"
+                                    WidthRequest="200"
+                                    IsVisible="{Binding IsVisibleDetail}"/>
                         </FlexLayout>
                     </StackLayout>
                 </ViewCell>

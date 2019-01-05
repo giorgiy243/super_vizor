@@ -11,6 +11,7 @@ namespace super_vizor
         private Groups _oldGroup;
         private Persones _oldPersone;
         private Azure _oldAzure;
+        private Apps _oldApps;
 
         public ObservableCollection<Company> companys { get; set; }
 
@@ -19,6 +20,8 @@ namespace super_vizor
         public ObservableCollection<Persones> persones { get; set; }
 
         public ObservableCollection<Azure> azures { get; set; }
+
+        public ObservableCollection<Apps> apps { get; set; }
 
         public CompanyViewModel()
         {
@@ -189,6 +192,90 @@ namespace super_vizor
                     IsVisible = false,
                 },
             };
+
+            apps = new ObservableCollection<Apps>
+            {
+                new Apps
+                {
+                    Name = "app 1",
+                    Owner = "owner 1",
+                    RepoForBuild = "http:// .....",
+                    URL_download = "http:// .....",
+                    Version = "1.0.5",
+                    DeveloperGroup = "group_1",
+                    IsVisible = false,
+                },
+                new Apps
+                {
+                    Name = "app 2",
+                    Owner = "owner 2",
+                    RepoForBuild = "http:// .....",
+                    URL_download = "http:// .....",
+                    Version = "2.2.5",
+                    DeveloperGroup = "group_2",
+                    IsVisible = false,
+                },
+                new Apps
+                {
+                    Name = "app 3",
+                    Owner = "owner 2",
+                    RepoForBuild = "http:// .....",
+                    URL_download = "http:// .....",
+                    Version = "0.0.5",
+                    DeveloperGroup = "group_1",
+                    IsVisible = false,
+                },
+                new Apps
+                {
+                    Name = "app 4",
+                    Owner = "owner 3",
+                    RepoForBuild = "http:// .....",
+                    URL_download = "http:// .....",
+                    Version = "3.0.3",
+                    DeveloperGroup = "group_3",
+                    IsVisible = false,
+                },
+                new Apps
+                {
+                    Name = "app 5",
+                    Owner = "owner 1",
+                    RepoForBuild = "http:// .....",
+                    URL_download = "http:// .....",
+                    Version = "1.0.5",
+                    DeveloperGroup = "group_3",
+                    IsVisible = false,
+                },
+                new Apps
+                {
+                    Name = "app 5",
+                    Owner = "owner 12",
+                    RepoForBuild = "http:// .....",
+                    URL_download = "http:// .....",
+                    Version = "1.0.5",
+                    DeveloperGroup = "group_3",
+                    IsVisible = false,
+                },
+                new Apps
+                {
+                    Name = "app 7",
+                    Owner = "owner 1",
+                    RepoForBuild = "http:// .....",
+                    URL_download = "http:// .....",
+                    Version = "1.5",
+                    DeveloperGroup = "group_4",
+                    IsVisible = false,
+                },
+                new Apps
+                {
+                    Name = "app 8",
+                    Owner = "owner 3",
+                    RepoForBuild = "http:// .....",
+                    URL_download = "http:// .....",
+                    Version = "1.0",
+                    DeveloperGroup = "group_4",
+                    IsVisible = false,
+                },
+            };
         }
 
 
@@ -276,6 +363,27 @@ namespace super_vizor
             _oldAzure = azure;
         }
 
+        public void HideOrShowApps(Apps app)
+        {
+            if (_oldApps == app)
+            {
+                app.IsVisible = !app.IsVisible;
+                UpdateApps(app);
+            }
+            else
+            {
+                if (_oldApps != null)
+                {
+                    _oldApps.IsVisible = false;
+                    UpdateApps(_oldApps);
+                }
+                app.IsVisible = true;
+                UpdateApps(app);
+            }
+
+            _oldApps = app;
+        }
+
         private void UpdateCompany (Company company)
         {
             var index = companys.IndexOf(company);
@@ -308,6 +416,14 @@ namespace super_vizor
             azures.Insert(index, azure);
         }
 
+        private void UpdateApps(Apps app)
+        {
+            var index = apps.IndexOf(app);
+
+            apps.Remove(app);
+            apps.Insert(index, app);
+        }
+
         public void RemoveCompany (Company company)
         {
             var index = companys.IndexOf(company);
@@ -334,6 +450,13 @@ namespace super_vizor
             var index = azures.IndexOf(azure);
             azures.RemoveAt(index);
             _oldAzure = null;
+        }
+
+        public void RemoveApp(Apps app)
+        {
+            var index = apps.IndexOf(app);
+            apps.RemoveAt(index);
+            _oldApps = null;
         }
 
         public void ChangePerson (Persones oldPersone, Persones persone)

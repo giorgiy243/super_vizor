@@ -15,6 +15,7 @@ namespace super_vizor
         private CompanyViewModel _vm;
         private Groups _goup;
         private Azure _azure;
+        private Apps _apps;
 
         internal Page_Details(CompanyViewModel vm)
         {
@@ -44,6 +45,17 @@ namespace super_vizor
             vm.HideOrShowAzure(azure);
         }
 
+        private void ListView_ItemTapped_Apps(object sender, ItemTappedEventArgs e)
+        {
+            var vm = BindingContext as CompanyViewModel;
+            var apps = e.Item as Apps;
+
+            _vm = vm;
+            _apps = apps;
+
+            vm.HideOrShowApps(apps);
+        }
+
         private void Button_Remove_Group(object sender, EventArgs e)
         {
             _vm.RemoveGroup(_goup);
@@ -52,6 +64,11 @@ namespace super_vizor
         private void Button_Remove_Azure(object sender, EventArgs e)
         {
             _vm.RemoveAzure(_azure);
+        }
+
+        private void Button_Remove_App (object sender, EventArgs e)
+        {
+            _vm.RemoveApp(_apps);
         }
 
         private void Button_Show(object sender, EventArgs e)
@@ -63,12 +80,21 @@ namespace super_vizor
         {
             Groups.IsVisible = true;
             Azure.IsVisible = false;
+            Apps.IsVisible = false;
         }
 
         private void Button_Azure (object sender, EventArgs s)
         {
             Azure.IsVisible = true;
             Groups.IsVisible = false;
+            Apps.IsVisible = false;
+        }
+
+        private void Button_Apps(object sender, EventArgs e)
+        {
+            Groups.IsVisible = false;
+            Azure.IsVisible = false;
+            Apps.IsVisible = true;
         }
     }
 }

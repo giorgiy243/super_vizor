@@ -49,9 +49,11 @@
                             </FlexLayout>
                             <FlexLayout Direction="Row">
                                 <Button Text="Remove"
+                                        WidthRequest="200"
                                         Clicked="Button_Remove"
                                         IsVisible="{Binding IsVisible}"/>
                                 <Button Text="Update"
+                                        WidthRequest="200"
                                         Clicked="Button_Update"
                                         IsVisible="{Binding IsVisible}"/>
                             </FlexLayout>

@@ -11,9 +11,18 @@
 
     <StackLayout>
         <FlexLayout Direction="Row" >
-            <Button Text="Groups" HeightRequest="50" Clicked="Button_Groups"/>
-            <Button Text="Azure" HeightRequest="50" Clicked="Button_Azure"/>
-            <Button Text="Apps" HeightRequest="50"/>
+            <Button Text="Groups" 
+                    HeightRequest="50"
+                    WidthRequest="130"
+                    Clicked="Button_Groups"/>
+            <Button Text="Azure"
+                    HeightRequest="50"
+                    WidthRequest="130"
+                    Clicked="Button_Azure"/>
+            <Button Text="Apps"
+                    HeightRequest="50"
+                    WidthRequest="130"
+                    Clicked="Button_Apps"/>
         </FlexLayout>
 
 
@@ -28,14 +37,15 @@
                     <ViewCell>
                         <StackLayout Padding="12,2,12,2">
                             <Label Text="{Binding Name}" FontSize="28"/>
-                            <FlexLayout
-                            Direction="Row">
+                            <FlexLayout Direction="Row">
                                 <Button Text="Remove"
-                                    Clicked="Button_Remove_Group"
-                                IsVisible="{Binding IsVisible}"/>
+                                        Clicked="Button_Remove_Group"
+                                        WidthRequest="200"
+                                        IsVisible="{Binding IsVisible}"/>
                                 <Button Text="Show"
-                                Clicked="Button_Show"
-                                IsVisible="{Binding IsVisible}"/>
+                                        Clicked="Button_Show"
+                                        WidthRequest="200"
+                                        IsVisible="{Binding IsVisible}"/>
                             </FlexLayout>
                         </StackLayout>
                     </ViewCell>
@@ -54,18 +64,60 @@
                     <ViewCell>
                         <StackLayout Padding="12,2,12,2">
                             <Label Text="{Binding ID}" FontSize="28"/>
-                            <FlexLayout
-                            Direction="Row">
+                            <FlexLayout Direction="Row">
                                 <Button Text="Remove"
-                                    Clicked="Button_Remove_Azure"
-                                IsVisible="{Binding IsVisible}"/>
+                                        WidthRequest="200"
+                                        Clicked="Button_Remove_Azure"
+                                        IsVisible="{Binding IsVisible}"/>
                             </FlexLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackLayout>
-    
 
+        <ListView ItemsSource="{Binding apps}"
+                  HasUnevenRows="True"
+                  Margin="10,10"
+                  x:Name="Apps"
+                  ItemTapped="ListView_ItemTapped_Apps"
+                  IsVisible="False">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="12,2,12,2">
+                            <FlexLayout Direction="Row">
+                                <Label Text="{Binding Name}" FontSize="28"/>
+                                <Label Text="  " FontSize="28"/>
+                                <Label Text="version: "/>
+                                <Label Text="{Binding Version}"/>
+                            </FlexLayout>
+
+                            <StackLayout IsVisible="{Binding IsVisible}">
+                                <Label Text="Repo for build:  " FontSize="22"/>
+                                <Label Text="{Binding RepoForBuild}" FontSize="22"/>
+
+                                <Label Text="URL for download:  " FontSize="22"/>
+                                <Label Text="{Binding URL_download}" FontSize="22"/>
+
+                                <Label Text="Developer group:  " FontSize="22"/>
+                                <Label Text="{Binding DeveloperGroup}" FontSize="22"/>
+                            </StackLayout>
+
+                            <FlexLayout Direction="Row">
+                                <Button Text="Remove"
+                                        WidthRequest="200"
+                                        Clicked="Button_Remove_App"
+                                        IsVisible="{Binding IsVisible}"/>
+                                <Button Text="Show more"
+                                        WidthRequest="200"
+                                        IsVisible="{Binding IsVisible}"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
 </ContentPage>
