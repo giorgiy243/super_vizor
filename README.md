@@ -10,6 +10,10 @@ run with PowerShell.
 
 3. After you should enter the absolute path to your local repository and press Enter.
 
+4. In the next line, enter the absolute path of the directory in which the build report will be generated.
+PowerShell will create a report_auto_builging.txt file. This will contain the name of the branch, the status of 
+the assembly, the end time of the assembly, and a link to the assembly logs.
+
 Then, starting from the branch, the master script will start pushing the updates to the remote repository one by one.
 After adding a branch update to a remote repository, the branch begins automatic assembly into the appcenter.
 When the build is complete, appcenter sends a build report to the google account.
