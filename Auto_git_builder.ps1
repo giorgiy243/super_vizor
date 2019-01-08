@@ -15,6 +15,3 @@ foreach ($item in $GitBranchs)
 	git push
 	}
 }
-
-$ub = new-object System.UriBuilder -argumentlist 'http', 'myhost.com', 80
-$ub |Out-string
